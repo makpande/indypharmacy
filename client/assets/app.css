@@ -6,3 +6,14 @@ button.pure-button {border: 1px solid #0078E7; border-radius: 4px; margin-left: 
 ul {list-style: none; margin: 0; padding: 0;}
 a, a:focus, a:active {outline: none;}
 .thin {font-weight: 200;}
+
+.splash {
+    /* absolute center .splash within .splash-container */
+    width: 75%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 300px; left: 150px; bottom: 0; right: 0;
+    text-align: center;
+    text-transform: lowercase;
+}

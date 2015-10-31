@@ -18,8 +18,9 @@ module.exports = React.createClass({
         <span id="menu-link" onClick={this.props.sendMenuClick}><span></span></span>
         <div id="menu-list">
           <div className="pure-menu pure-menu-open">
-            <span className="pure-menu-heading">textualspew</span>
+            <span className="pure-menu-heading"></span>
             <ul>
+              <li><Link to="search">search</Link></li>
               <li><Link to="spews">spews</Link></li>
               <li><Link to="about">about</Link></li>
               {signingLink}
