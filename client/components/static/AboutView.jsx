@@ -13,7 +13,8 @@ module.exports = React.createClass({
     return (
       <div id="about-view">
         <h1>about textual spews</h1>
-        <p>{url} a test app integrating stateless rails api with routing react client frontend</p>
+        <small>{url}</small>
+        <p>a test app integrating stateless rails api with routing react client frontend</p>
       </div>
     );
   }

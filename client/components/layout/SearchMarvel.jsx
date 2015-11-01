@@ -11,10 +11,10 @@ module.exports = React.createClass({
   render: function(){
     return (
       <form className="pure-form pure-g" onSubmit={this.handleMarvelSubmit}>
-          <div className="pure-u-4-5">
+          <div className="pure-u-7-8">
             <input className="pure-input-1" type="text" placeholder="search your marvel character here..." ref="username" />
           </div>
-          <div className="pure-u-1-5">
+          <div className="pure-u-1-8">
             <button type="submit" className="pure-button pure-input-1 pure-button-primary">search</button>
           </div>
       </form>
