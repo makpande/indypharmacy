@@ -10,7 +10,7 @@ var Route = Router.Route;
 module.exports = (
   <Route name="app" path="/" handler={App}>
     <DefaultRoute name="search" handler={Search} />
-    <Route name="spews" handler={SpewsView} />
-    <Route name="about" handler={AboutView} />
+     <Route name="spews" path="spews/:username" handler={SpewsView} />
+     <Route name="about" handler={AboutView} />
   </Route>
 );

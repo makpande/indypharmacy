@@ -1,12 +1,14 @@
 var React = require('react');
 var Router = require('react-router');
+var SpewsView = require('../spews/View.jsx');
 
 module.exports = React.createClass({
   mixins: [Router.Navigation],
-  handleMarvelSubmit: function(){
+  handleMarvelSubmit: function(e){
+    e.preventDefault();
     var username = this.refs.username.getDOMNode().value;
     this.refs.username.getDOMNode().value = '';
-    this.transitionTo('spews', {username: username});
+    this.transitionTo("spews", {username: username});
   },
   render: function(){
     return (

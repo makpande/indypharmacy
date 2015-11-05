@@ -10,8 +10,6 @@ module.exports = React.createClass({
             <p></p>
             <SearchMarvel />
             <small className="splash-subhead">search for your favorite marvel comics characters and interact with other fans</small>
-            <p></p>
-            <small className="splash-subhead">Data provided by Marvel. © 2015 MARVEL</small>
       </div>
     </div>
     )
