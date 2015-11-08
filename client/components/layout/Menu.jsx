@@ -25,9 +25,14 @@ module.exports = React.createClass({
               <li><Link to="about">about</Link></li>
               {signingLink}
             </ul>
-          </div>
+            <p></p>
+            <p></p>
+            <div className="rollover"> <a href="http://www.marvel.com/comics"></a> </div>
+        </div>
         </div>
       </div>
     );
   }
 });
+
+// <a href="http://www.marvel.com/comics"><img src="http://i.imgur.com/1iLZmSd.png" onmouseover="this.src='http://i.imgur.com/r92Kdlu.png'" onmouseout="this.src='http://i.imgur.com/1iLZmSd.png'" /></a>

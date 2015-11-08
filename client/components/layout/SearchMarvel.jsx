@@ -6,7 +6,7 @@ module.exports = React.createClass({
   mixins: [Router.Navigation],
   handleMarvelSubmit: function(e){
     e.preventDefault();
-    var username = this.refs.username.getDOMNode().value;
+    var username = this.refs.username.getDOMNode().value.split(' ').join('%20');
     this.refs.username.getDOMNode().value = '';
     this.transitionTo("spews", {username: username});
   },

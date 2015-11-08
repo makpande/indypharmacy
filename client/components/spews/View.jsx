@@ -62,7 +62,7 @@ module.exports = React.createClass({
       }else{
         console.log("no bios");
         return (
-          <div>no such character exists in Marvel database</div>
+          <div>retrieving data</div>
         );
       }
     };
@@ -71,11 +71,10 @@ module.exports = React.createClass({
     return (
       <div className="spews-view">
         <div className="pure-g">
-          <div className="pure-u-1-3">
+          <div className="pure-u-2-3">
             <h1>{username}</h1>
             {marvelBios()}
           </div>
-          <div className="pure-u-1-3"></div>
           <div className="pure-u-1-3">
             <h1>#textualspew</h1>
             <SpewsForm writeSpewToAPI={this.writeSpewToAPI} optimisticUpdate={this.optimisticUpdate} currentUser={this.props.currentUser} signedIn={this.props.signedIn} />
