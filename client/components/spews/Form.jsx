@@ -18,7 +18,7 @@ module.exports = React.createClass({
     return (
       <form className="spews-form pure-form" onSubmit={this.handleSubmit}>
         <input type="text" placeholder="spew here..." ref="content" />
-        <button type="submit" className="pure-button pure-button-primary">spew</button>
+        <button type="submit" className="pure-button pure-button-error">spew</button>
       </form>
     );
   }

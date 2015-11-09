@@ -66,3 +66,20 @@ h11 {
 
 .hidden { visibility: hidden; display: none;}
 .showing { visibility: visible; display: block;}
+
+a:link {
+    color: red;
+    text-decoration: none;
+}
+a:visited {
+    color: red;
+    text-decoration: none;
+}
+a:hover {
+    color: hotpink;
+    text-decoration: underline;
+}
+a:active {
+    color: red;
+    text-decoration: underline;
+}

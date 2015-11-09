@@ -17,7 +17,7 @@ module.exports = React.createClass({
             <input className="pure-input-1" type="text" placeholder="search your marvel character here..." ref="username" />
           </div>
           <div className="pure-u-1-8">
-            <button type="submit" className="pure-button pure-input-1 pure-button-primary">search</button>
+            <button type="submit" className="pure-button pure-input-1 pure-button-error">search</button>
           </div>
       </form>
     )
