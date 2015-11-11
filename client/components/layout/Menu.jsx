@@ -28,6 +28,7 @@ module.exports = React.createClass({
             <p></p>
             <p></p>
             <div className="rollover"> <a href="http://www.marvel.com/comics"></a> </div>
+            <div className="rolloverlogo"> <a href="https://github.com/dpg5000"></a> </div>
         </div>
         </div>
       </div>

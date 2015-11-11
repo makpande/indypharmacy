@@ -83,3 +83,6 @@ a:active {
     color: red;
     text-decoration: underline;
 }
+.marvelimgs {
+  border-radius: 20px;
+}

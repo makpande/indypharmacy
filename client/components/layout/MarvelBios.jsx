@@ -17,7 +17,7 @@ module.exports = React.createClass({
         });
       return (
         <div className="bios" key={index}>
-          <img src={result.thumbnail.path + "/landscape_xlarge." + result.thumbnail.extension} />
+          <img className="marvelimgs" src={result.thumbnail.path + "/landscape_xlarge." + result.thumbnail.extension} />
           {result.name && <h4>{result.name}</h4>}
           {result.description && <small> {result.description}</small>}
           <h4 className={items.length == 0 ? "hidden" : "showing"}>selected issue appearances:</h4>
