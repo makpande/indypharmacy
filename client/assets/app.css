@@ -33,6 +33,8 @@ a, a:focus, a:active {outline: none;}
     top: 200px; left: 200px; bottom: 0; right: 200px;
     text-align: center;
     text-transform: lowercase;
+    color: white;
+    text-shadow: 2px 2px #474747;
 
 }
 
@@ -51,8 +53,9 @@ a, a:focus, a:active {outline: none;}
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
     color: white;
+    text-shadow: 1px 1px #474747;
     letter-spacing: 0.05em;
-    opacity: 0.8;
+    opacity: 2.8;
 }
 
 h11 {

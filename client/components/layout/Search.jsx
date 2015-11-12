@@ -9,7 +9,11 @@ module.exports = React.createClass({
             <h11>superhero spew</h11>
             <p></p>
             <SearchMarvel />
-            <small className="splash-subhead">search for your favorite marvel comics characters and interact with other fans</small>
+            <p className="splash-subhead">
+              search for your favorite marvel comics characters and interact with other fans
+            <br/>
+              log in via your twitter account and get in on the action  <img src="http://www.microsoft.com/en-us/outlook-com/img/footer-icon-twitter-5919eab442.svg"></img>
+          </p>
       </div>
     </div>
     )
