@@ -6,8 +6,8 @@ module.exports = React.createClass({
     var content = this.refs.content.getDOMNode().value.trim();
     if (!content) {return;}
     if (this.props.signedIn) {
-      this.props.optimisticUpdate({id: 'fake-id', content: content, user: this.props.currentUser});
-      this.props.writeSpewToAPI(JSON.stringify({spew: {content: content}}));
+      this.props.optimisticUpdate({id: 'fake-id', content: content, user: this.props.currentUser, characterId: this.props.characterId});
+      this.props.writeSpewToAPI(JSON.stringify({spew: {content: content, character_id: this.props.characterId}}));
       this.refs.content.getDOMNode().value = '';
       this.refs.content.getDOMNode().blur();
     } else {

@@ -13,3 +13,7 @@ gem 'pg'
 # oauth-ruby for identity & json web tokens for auth
 gem 'oauth'
 gem 'jwt'
+
+group 'development' do
+  gem 'annotate'
+end

@@ -2,7 +2,7 @@ class SpewsController < ApplicationController
   before_action :authenticate_request, only: [:create]
 
   def index
-    @spews = Spew.all.order(created_at: :desc)
+    @spews = Spew.where(character_id: params[:character_id]).order(created_at: :desc)
     render json: @spews, include: { user: { only: [:handle] } }, only: [:id, :content]
   end
 
@@ -18,6 +18,6 @@ class SpewsController < ApplicationController
 
 private
   def spew_params
-    params.require(:spew).permit(:content)
+    params.require(:spew).permit(:content, :character_id)
   end
 end

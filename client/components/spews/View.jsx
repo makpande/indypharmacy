@@ -14,19 +14,20 @@ module.exports = React.createClass({
     }
   },
   componentDidMount: function() {
-    this.readSpewsFromAPI();
-    console.log("ehllo wrold");
 
     helpers.getMarvelInfo(this.getParams().username)
       .then(function (dataObj) {
         console.log(dataObj);
         this.setState({
-          bios: dataObj.bios
+          bios: dataObj.bios,
+          characterId: dataObj.bios.data.results[0].id
         });
+        this.readSpewsFromAPI();
       }.bind(this));
   },
   readSpewsFromAPI: function() {
-    this.props.readFromAPI(this.props.origin + '/spews', function(spews) {
+    console.log("reading spews");
+    this.props.readFromAPI(this.props.origin + '/spews?character_id='+this.state.characterId, function(spews) {
       this.setState({data: spews});
     }.bind(this));
   },
@@ -54,13 +55,10 @@ module.exports = React.createClass({
 
     var marvelBios = function(){
       if (bios.data){
-        console.log("bios exists");
-        console.log(bios);
         return (
           <MarvelBios username={username} bios={bios} />
         );
       }else{
-        console.log("no bios");
         return (
           <div>retrieving data</div>
         );
@@ -77,7 +75,9 @@ module.exports = React.createClass({
           </div>
           <div className="pure-u-1-3">
             <h1>#textualspew</h1>
-            <SpewsForm writeSpewToAPI={this.writeSpewToAPI} optimisticUpdate={this.optimisticUpdate} currentUser={this.props.currentUser} signedIn={this.props.signedIn} />
+            <SpewsForm writeSpewToAPI={this.writeSpewToAPI}
+              optimisticUpdate={this.optimisticUpdate} currentUser={this.props.currentUser}
+              signedIn={this.props.signedIn} characterId={this.state.characterId} />
             <SpewsList data={this.state.data} />
           </div>
         </div>
