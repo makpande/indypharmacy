@@ -11,8 +11,7 @@
     "devserve": "webpack-dev-server -d --config webpack.dev.config.js --content-base public/ --progress --colors",
     "devbuild": "webpack -d --config webpack.dev.config.js --profile --progress --colors",
     "probuild": "webpack -p --config webpack.pro.config.js --profile --progress --colors",
-    "postinstall": "npm run probuild && npm run rejoice",
-    "rejoice": "echo yay!"
+    "postinstall": "npm run probuild",
   },
   "author": "dpg5000",
   "license": "ISC",
