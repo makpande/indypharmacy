@@ -8,7 +8,6 @@ a, a:focus, a:active {outline: none;}
 .thin {font-weight: 200;}
 
 
-
 .splash-container {
   background: url("https://i.imgur.com/KFxyppE.png") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -87,7 +86,7 @@ a:active {
     text-decoration: underline;
 }
 .marvelimgs {
-  border-radius: 20px;
+  border-radius: 25px;
 }
 .namebox {
   text-shadow: 2px 2px #FFFFFF;

@@ -1,5 +1,5 @@
 {
-  "name": "combo",
+  "name": "superherospew",
   "version": "0.0.1",
   "description": "an app for testing rails & react integration via textual spew",
   "main": "client/main.jsx",
@@ -9,7 +9,10 @@
   },
   "scripts": {
     "devserve": "webpack-dev-server -d --config webpack.dev.config.js --content-base public/ --progress --colors",
-    "devbuild": "webpack -d --config webpack.dev.config.js --profile --progress --colors"
+    "devbuild": "webpack -d --config webpack.dev.config.js --profile --progress --colors",
+    "probuild": "webpack -p --config webpack.pro.config.js --profile --progress --colors",
+    "postinstall": "npm run probuild && npm run success",
+    "success": "echo webpack success!"
   },
   "author": "dpg5000",
   "license": "ISC",

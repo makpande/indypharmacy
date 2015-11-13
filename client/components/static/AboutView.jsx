@@ -18,7 +18,10 @@ module.exports = React.createClass({
         <li><a href="http://jwt.io/">json web tokens</a> for server-client negotiations and authentication</li>
         <p></p>
         <li>data provided by marvel. © <a href="http://marvel.com/comics">2015 MARVEL</a></li>
-    </div>
+        <li>coded by David Goussev (DPG5000) with Ricky Panzer @ <a href="http://bloc.io">BLOC</a></li>
+        <p></p>
+          <img className="marvelimgs" src="http://i.imgur.com/Xg3ejh7.png"></img>
+      </div>
     );
   }
 });
