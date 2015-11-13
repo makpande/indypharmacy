@@ -89,3 +89,6 @@ a:active {
 .marvelimgs {
   border-radius: 20px;
 }
+.namebox {
+  text-shadow: 2px 2px #FFFFFF;
+}

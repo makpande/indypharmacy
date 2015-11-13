@@ -60,7 +60,7 @@ module.exports = React.createClass({
         );
       }else{
         return (
-          <div>retrieving data</div>
+          <div><img src="http://i.imgur.com/Acss22h.gif"></img></div>
         );
       }
     };
@@ -70,7 +70,7 @@ module.exports = React.createClass({
       <div className="spews-view">
         <div className="pure-g">
           <div className="pure-u-2-3">
-            <h1>{username}</h1>
+            <h1 className="namebox">{username}</h1>
             {marvelBios()}
           </div>
           <div className="pure-u-1-3">
@@ -85,3 +85,6 @@ module.exports = React.createClass({
     );
   }
 });
+
+
+// {marvelBios()}
