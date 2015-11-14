@@ -27,4 +27,5 @@
 
 # Ignore environment files
 /config/environments/development.rb
-/client/utils/keys.jsx
+
+/client/components/utils/keys.jsx
