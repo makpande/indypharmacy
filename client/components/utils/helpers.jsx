@@ -28,3 +28,7 @@ module.exports = helpers;
 // You're exporting an object with properties called API_KEY and PRIV_KEY:
 // So dance your pants off to
 // A Certain Ratio
+
+//
+// var API_KEY = require('./keys.jsx').API_KEY;
+// var PRIV_KEY = require('./keys.jsx').PRIV_KEY;
