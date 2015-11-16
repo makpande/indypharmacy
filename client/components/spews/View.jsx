@@ -17,7 +17,7 @@ module.exports = React.createClass({
 
     helpers.getMarvelInfo(this.getParams().username)
       .then(function (dataObj) {
-        
+
         this.setState({
           bios: dataObj.bios,
           characterId: dataObj.bios.data.results[0].id
@@ -59,7 +59,7 @@ module.exports = React.createClass({
         );
       }else{
         return (
-          <div><img src="http://i.imgur.com/Acss22h.gif"></img></div>
+          <div><img src="https://i.imgur.com/Acss22h.gif"></img></div>
         );
       }
     };

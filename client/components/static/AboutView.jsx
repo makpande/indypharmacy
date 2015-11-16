@@ -21,7 +21,7 @@ module.exports = React.createClass({
         <li>coded by David Goussev (<a href="https://github.com/dpg5000/">dpg5000</a>) with Ricky Panzer @ <a href="http://bloc.io">BLOC</a></li>
         <li>additional assistance & guidance from blogposts by <a href="https://twitter.com/fredguest">Fred Guest</a>, <a href="https://twitter.com/sg_in_sf">Stephen Grider</a>, and <a href="https://twitter.com/tylermcginnis33">Tyler McGinnis</a>.</li>
         <p></p>
-          <img className="marvelimgs" src="http://i.imgur.com/Xg3ejh7.png"></img>
+          <img className="marvelimgs" src="https://i.imgur.com/Xg3ejh7.png"></img>
       </div>
     );
   }
