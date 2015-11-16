@@ -1,6 +1,6 @@
 var axios = require('axios');
 var crypto = require('crypto');
-console.log(process.env)
+console.log(process.env);
 var API_KEY = process.env('API_KEY') || require('./keys.jsx').API_KEY;
 var PRIV_KEY = process.env('PRIV_KEY') || require('./keys.jsx').PRIV_KEY;
 
