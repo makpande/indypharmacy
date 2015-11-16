@@ -1,6 +1,7 @@
 var config = require('./webpack.config.js');
 var webpack = require('webpack');
 
+console.log("hello world");
 console.log(process.env);
 config.plugins.push(
   new webpack.DefinePlugin({
