@@ -5,7 +5,7 @@ var API_KEY = process.env['API_KEY'];
 var PRIV_KEY = process.env['PRIV_KEY'];
 
 function getBios(username){
-  var url = 'https://gateway.marvel.com:80/v1/public/characters?nameStartsWith=' + username.split(' ').join('%20') + '&apikey='+API_KEY;
+  var url = 'http://gateway.marvel.com:80/v1/public/characters?nameStartsWith=' + username.split(' ').join('%20') + '&apikey='+API_KEY;
   var ts = new Date().getTime();
   var hash = crypto.createHash('md5').update(ts + PRIV_KEY + API_KEY).digest('hex');
     url += "&ts="+ts+"&hash="+hash;
