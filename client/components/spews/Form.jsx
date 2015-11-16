@@ -16,10 +16,12 @@ module.exports = React.createClass({
   },
   render: function() {
     return (
-      <form className="spews-form pure-form" onSubmit={this.handleSubmit}>
+      <form className="pure-form" onSubmit={this.handleSubmit}>
+        <fieldset>
         <input type="text" placeholder="spew here..." ref="content" />
         <button type="submit" className={this.props.signedIn ? "pure-button pure-button-primary" : "button-error pure-button"}>spew</button>
-    </form>
+        </fieldset>
+      </form>
     );
   }
 });
