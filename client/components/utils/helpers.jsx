@@ -1,7 +1,8 @@
 var axios = require('axios');
 var crypto = require('crypto');
-var API_KEY = config.get('API_KEY') || require('./keys.jsx').API_KEY;
-var PRIV_KEY = config.get('PRIV_KEY') || require('./keys.jsx').PRIV_KEY;
+console.log(process.env)
+var API_KEY = process.env('API_KEY') || require('./keys.jsx').API_KEY;
+var PRIV_KEY = process.env('PRIV_KEY') || require('./keys.jsx').PRIV_KEY;
 
 function getBios(username){
   var url = 'http://gateway.marvel.com:80/v1/public/characters?nameStartsWith=' + username.split(' ').join('%20') + '&apikey='+API_KEY;
