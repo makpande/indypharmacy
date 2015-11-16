@@ -68,11 +68,11 @@ module.exports = React.createClass({
     return (
       <div className="spews-view">
         <div className="pure-g">
-          <div className="pure-u-2-3">
+          <div className="pure-u-5-8">
             <h1 className="namebox">{username}</h1>
             {marvelBios()}
           </div>
-          <div className="pure-u-1-3">
+          <div className="pure-u-3-8">
             <h1>#textualspew</h1>
             <SpewsForm writeSpewToAPI={this.writeSpewToAPI}
               optimisticUpdate={this.optimisticUpdate} currentUser={this.props.currentUser}
