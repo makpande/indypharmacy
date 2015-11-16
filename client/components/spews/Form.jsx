@@ -18,8 +18,8 @@ module.exports = React.createClass({
     return (
       <form className="spews-form pure-form" onSubmit={this.handleSubmit}>
         <input type="text" placeholder="spew here..." ref="content" />
-        <button type="submit" className="pure-button pure-button-error">spew</button>
-      </form>
+        <button type="submit" className={this.props.signedIn ? "pure-button pure-button-primary" : "button-error pure-button"}>spew</button>
+    </form>
     );
   }
 });
@@ -27,6 +27,6 @@ module.exports = React.createClass({
 
 // preventDefault method on event (e) guards against event propagation (DOMNode value not set in recurrence)
 // blur method shifts focus after resetting DOMNode value back to nil
-//optimisticUpdate called with obj containing arbitrary 'fake-id', plus content and user of new spew being added
-  // fake-id can be arbitrary string because it satisifies React's key attribute requirement
-  // and it is unique from the other keys because they're all integer-specific ActiveRecord primary keys already in the collection
+// optimisticUpdate called with obj containing arbitrary 'fake-id', plus content and user of new spew being added
+//   fake-id can be arbitrary string because it satisifies React's key attribute requirement
+//   and it is unique from the other keys because they're all integer-specific ActiveRecord primary keys already in the collection

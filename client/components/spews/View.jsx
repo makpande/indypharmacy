@@ -17,7 +17,7 @@ module.exports = React.createClass({
 
     helpers.getMarvelInfo(this.getParams().username)
       .then(function (dataObj) {
-        console.log(dataObj);
+        
         this.setState({
           bios: dataObj.bios,
           characterId: dataObj.bios.data.results[0].id
@@ -26,7 +26,6 @@ module.exports = React.createClass({
       }.bind(this));
   },
   readSpewsFromAPI: function() {
-    console.log("reading spews");
     this.props.readFromAPI(this.props.origin + '/spews?character_id='+this.state.characterId, function(spews) {
       this.setState({data: spews});
     }.bind(this));

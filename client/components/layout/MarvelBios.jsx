@@ -7,7 +7,6 @@ module.exports = React.createClass({
     bios: React.PropTypes.object.isRequired
   },
   render: function() {
-    console.log(this.props.bios.data);
     var results = this.props.bios.data.results.map(function(result, index) {
       var items = _.shuffle(result.comics.items.map(function(item, i) {
         return <div className="series" key={i}>{item.name && <li><small>{item.name}</small></li>}</div>;
