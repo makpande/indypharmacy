@@ -25,11 +25,11 @@ a, a:focus, a:active {outline: none;}
 
 .splash {
     /* absolute center .splash within .splash-container */
-    width: 70%;
+    width: 65%;
     height: 50%;
     margin: auto;
-    position: absolute;
-    top: 200px; left: 100px; bottom: 0; right: 100px;
+    position: fixed;
+    top: 200px; left: 50px; bottom: 0; right: 50px;
     text-align: center;
     text-transform: lowercase;
     color: white;
