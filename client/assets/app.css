@@ -7,8 +7,9 @@ ul {list-style: none; margin: 0; padding: 0;}
 a, a:focus, a:active {outline: none;}
 .thin {font-weight: 200;}
 
-@media handheld, only screen and (max-width: 767px) {
+@media only screen and (max-device-width: 480px) {
   #app {left: 10px; padding-left: 10px;}
+  .splash {position: relative;}
 }
 
 
