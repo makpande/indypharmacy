@@ -44,6 +44,8 @@ module.exports = React.createClass({
     this.setState({data: spews});
   },
 
+
+
   // optimisticUpdate brings superfast spew updating (rendered before server side validations on assumptions of validity)
   // add the spew.shift() method to remove the first element in the array of spew data, which will be the optimistic update
   // then optimisticUpdate method takes a spew as an arg, prepends it to existing array and resets data's state.
@@ -59,7 +61,7 @@ module.exports = React.createClass({
         );
       }else{
         return (
-          <div><img src="https://i.imgur.com/Acss22h.gif"></img></div>
+            <div><img src="https://i.imgur.com/Acss22h.gif"></img></div>
         );
       }
     };

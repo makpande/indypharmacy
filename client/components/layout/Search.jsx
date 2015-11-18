@@ -10,9 +10,11 @@ module.exports = React.createClass({
             <p></p>
             <SearchMarvel />
             <p className="splash-subhead">
-              search for your favorite marvel comics characters or teams and interact with other fans
+              search for your favorite marvel comics characters and interact with other fans
             <br/>
-              log in via your twitter account and get in on the action  <img src="http://www.microsoft.com/en-us/outlook-com/img/footer-icon-twitter-5919eab442.svg"></img>
+              log in via your twitter account and get in on the action
+            <br/>
+              <img src="http://www.microsoft.com/en-us/outlook-com/img/footer-icon-twitter-5919eab442.svg"></img>
           </p>
       </div>
     </div>
