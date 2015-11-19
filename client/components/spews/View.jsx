@@ -17,10 +17,13 @@ module.exports = React.createClass({
 
     helpers.getMarvelInfo(this.getParams().username)
       .then(function (dataObj) {
+        console.log(dataObj);
+
+        var firstResult = dataObj.bios.data.results[0]
 
         this.setState({
           bios: dataObj.bios,
-          characterId: dataObj.bios.data.results[0].id
+          characterId: firstResult ? firstResult.id : null
         });
         this.readSpewsFromAPI();
       }.bind(this));
@@ -53,15 +56,26 @@ module.exports = React.createClass({
     var username = this.getParams().username;
 
     var bios = this.state.bios;
+    console.log(bios);
 
     var marvelBios = function(){
-      if (bios.data){
-        return (
-          <MarvelBios username={username} bios={bios} />
-        );
-      }else{
+      if (!bios.data){
         return (
             <div><img src="https://i.imgur.com/Acss22h.gif"></img></div>
+        );
+      }
+      else if (bios.data && bios.data.results.length == 0){
+        return (
+            <div>
+              <p>
+                No Records Found.
+              </p>
+            </div>
+        );
+      }
+      else if (bios.data){
+        return (
+          <MarvelBios username={username} bios={bios} />
         );
       }
     };
