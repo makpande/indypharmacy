@@ -56,7 +56,7 @@ module.exports = React.createClass({
     var username = this.getParams().username;
 
     var bios = this.state.bios;
-    console.log(bios);
+    
 
     var marvelBios = function(){
       if (!bios.data){
@@ -80,7 +80,7 @@ module.exports = React.createClass({
       }
     };
 
-
+// THREE STEP CLOSE/ERROR CHECK.
     return (
       <div className="spews-view">
         <div className="pure-g">
