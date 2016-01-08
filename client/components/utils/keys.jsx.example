@@ -1,0 +1,4 @@
+module.exports = {
+  API_KEY: 'your datasource api key',
+  PRIV_KEY:'your datasource priv key'
+};
