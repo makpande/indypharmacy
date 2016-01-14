@@ -1,4 +1,4 @@
-body {background: #e0e3e5; color: #777;}
+body {background: #e0e3e5; color: #000;}
 #app {position: relative; padding-left: 0; cursor: default;}
 #content {max-width: 800px; margin: 4em auto; padding: 0 2em; line-height: 1.5em;}
 .pure-form input[type=text], button.pure-button {padding-top: 0.6em; padding-bottom: 0.5em}
@@ -68,19 +68,16 @@ h11 {
     font-weight: bold;
 }
 
-.bios {
-  padding-right: 2em;
-}
 
 .hidden { visibility: hidden; display: none;}
 .showing { visibility: visible; display: block;}
 
 a:link {
-    color: red;
+    color: blue;
     text-decoration: none;
 }
 a:visited {
-    color: red;
+    color: blue;
     text-decoration: none;
 }
 a:hover {
@@ -88,7 +85,7 @@ a:hover {
     text-decoration: underline;
 }
 a:active {
-    color: red;
+    color: blue;
     text-decoration: underline;
 }
 .marvelimgs {

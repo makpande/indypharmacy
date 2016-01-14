@@ -1,0 +1,29 @@
+.pure-menu-list {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.pure-menu-item {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.pure-menu-link, .pure-menu-heading {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.pure-menu-horizontal {
+    white-space: nowrap;
+    width: 100%;
+}
+.pure-menu-horizontal .pure-menu-list {
+    display: inline-block;
+}
+.pure-menu-horizontal .pure-menu-item, .pure-menu-horizontal .pure-menu-heading, .pure-menu-horizontal .pure-menu-separator {
+    display: inline-block;
+    horizontal-align: middle;
+}
+.pure-menu-item .pure-menu-item {
+    display: block;
+  }

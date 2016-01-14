@@ -1,0 +1,7 @@
+secret_key_base: 'asdf'
+twitter_consumer_key: 'm83yuRJhlTTollmc0F7Ik8KRZ'
+twitter_consumer_secret: 'cokdNqQeQSShnTGhMFSX218JDkmZs1vH7ebyhUUt51npWEKiN8'
+API_KEY: 'm83yuRJhlTTollmc0F7Ik8KRZ'
+PRIV_KEY: 'cokdNqQeQSShnTGhMFSX218JDkmZs1vH7ebyhUUt51npWEKiN8'
+OAUTH_CALLBACK: 'http://127.0.0.1:3000/access_token'
+ORIGIN: 'http://127.0.0.1:3000/'

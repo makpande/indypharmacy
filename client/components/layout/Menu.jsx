@@ -20,15 +20,16 @@ module.exports = React.createClass({
           <div className="pure-menu pure-menu-open">
             <span className="pure-menu-heading"></span>
             <ul>
-              <li><Link to="search">search</Link></li>
-
-              <li><Link to="about">about</Link></li>
+              <li><Link to="home">Home</Link></li>
+              <li><Link to="topics">PharmacyBlog</Link></li>
+              
+              <li><Link to="contact">Contact Us</Link></li>
+              <li><Link to="about">About</Link></li>
               {signingLink}
             </ul>
             <p></p>
             <p></p>
-            <div className="rollover"> <a href="http://www.marvel.com/comics"></a> </div>
-            <div className="rolloverlogo"> <a href="https://github.com/dpg5000"></a> </div>
+
         </div>
         </div>
       </div>

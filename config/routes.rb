@@ -7,5 +7,8 @@ Rails.application.routes.draw do
 
   resources :spews, only: [:index, :create, :show]
 
+  resources :topics do
+    resources :posts
+  end
   match '*all', to: 'application#index', via: [:get]
 end

@@ -4,7 +4,7 @@ ruby '2.2.1'
 
 gem 'rails', '4.2.0'
 gem 'rails-api'
-
+gem 'faker'
 # webserver
 gem 'puma'
 #postgres db

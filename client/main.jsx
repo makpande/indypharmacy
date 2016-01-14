@@ -1,6 +1,7 @@
 require('./assets/app.css');
 require('./assets/menu.css');
 require('./assets/spews.css');
+require('./assets/home.css');
 
 var React = require('react');
 var Router = require('react-router');

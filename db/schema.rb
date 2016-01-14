@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112045321) do
+ActiveRecord::Schema.define(version: 20160113220536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,19 @@ ActiveRecord::Schema.define(version: 20151112045321) do
 
   add_index "oauths", ["token"], name: "index_oauths_on_token", using: :btree
 
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "post_image"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "topic_id"
+  end
+
+  add_index "posts", ["topic_id"], name: "index_posts_on_topic_id", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
+
   create_table "spews", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "content",      null: false
@@ -32,6 +45,14 @@ ActiveRecord::Schema.define(version: 20151112045321) do
   end
 
   add_index "spews", ["user_id"], name: "index_spews_on_user_id", using: :btree
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "topic_image"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "uid",        null: false

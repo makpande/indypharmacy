@@ -5,3 +5,22 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+15.times do
+  Topic.create!(
+    title: Faker::Lorem.sentence,
+    body: Faker::Lorem.paragraph,
+    topic_image: Faker::Avatar.image("Topic_Image", "200x200")
+  )
+end
+topics = Topic.all
+
+50.times do
+   Post.create!(
+     topic:  topics.sample,
+     title:  Faker::Lorem.sentence,
+     body:   Faker::Lorem.paragraph,
+     post_image: Faker::Avatar.image("Post_Image", "200x200")
+   )
+ end
+
+ posts = Post.all
