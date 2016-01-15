@@ -16,8 +16,10 @@ module.exports = React.createClass({
   },
 
   readPostFromAPI: function() {
+    console.log("reading from api");
     this.props.readFromAPI(this.props.origin + '/topics/' + 3 + '/posts', function(posts) {
-    this.setState({data: posts});
+      console.log(posts);
+      this.setState({data: posts});
     }.bind(this));
   },
   writePostToAPI: function(data) {

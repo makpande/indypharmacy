@@ -1,5 +1,4 @@
 var React = require('react');
-var TopicsList = require('./TopicList.jsx');
 var Router = require('react-router');
 var Link = Router.Link;
 
@@ -10,6 +9,7 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function() {
+    console.log("here in topics view");
     this.readTopicFromAPI();
   },
 
@@ -40,8 +40,9 @@ module.exports = React.createClass({
     return this.state.data.slice(0, 5).map(function(topic){
       return (
         <ul>
+          <p> hello world</p>
           <div className="topic_title">
-              <Link to="topictitle">
+              <Link to={`/topics/${topic.id}`}>
                 <h4>{topic.title}</h4>
               </Link>
           </div>
