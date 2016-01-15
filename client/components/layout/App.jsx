@@ -72,9 +72,7 @@ module.exports = React.createClass({
     return (
       <div id="app" className={menu}>
         <Menu origin={this.props.origin} sendMenuClick={this.handleMenuClick} signedIn={this.state.signedIn} />
-        <div id="content">
-          <RouteHandler origin={this.props.origin} readFromAPI={this.readFromAPI} writeToAPI={this.writeToAPI} currentUser={this.state.currentUser} signedIn={this.state.signedIn} />
-        </div>
+        {this.props.children}
       </div>
     );
   }
