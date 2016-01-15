@@ -4,17 +4,19 @@ var Router = require('react-router');
 var Link = Router.Link;
 
 module.exports = React.createClass({
+
   getInitialState: function() {
     return {data: []};
   },
+
   componentDidMount: function() {
     this.readTopicFromAPI();
   },
+
   readTopicFromAPI: function() {
     this.props.readFromAPI(this.props.origin + '/topics', function(topics) {
       this.setState({data: topics});
     }.bind(this));
-
   },
 
   writeTopicToAPI: function(data) {
@@ -35,12 +37,13 @@ module.exports = React.createClass({
   },
 
   renderTopics: function() {
-    return this.state.data.map(function(topic){
+    return this.state.data.slice(0, 5).map(function(topic){
       return (
         <ul>
           <div className="topic_title">
               <Link to="topictitle">
-                <h4>{topic.title}</h4></Link>
+                <h4>{topic.title}</h4>
+              </Link>
           </div>
           <div>
             <span className="topicId"> {topic.id} </span>
