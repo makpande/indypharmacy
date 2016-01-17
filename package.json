@@ -1,5 +1,5 @@
 {
-  "name": "superherospew",
+  "name": "Makarand Pande",
   "version": "0.0.1",
   "description": "an app for testing rails & react integration via textual spew",
   "main": "client/main.jsx",
@@ -13,7 +13,7 @@
     "probuild": "webpack -p --config webpack.pro.config.js --profile --progress --colors",
     "postinstall": "npm run probuild"
   },
-  "author": "dpg5000",
+  "author": "Makarand Pande",
   "license": "ISC",
   "engines": {
     "node": "0.10.x",

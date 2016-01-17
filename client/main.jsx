@@ -4,23 +4,37 @@ require('./assets/spews.css');
 require('./assets/home.css');
 
 import React from 'react'
-import {browserHistory, Router, Route, Link} from 'react-router'
-import { render } from 'react-dom'
+import {browserHistory, Router, Route, Link, DefaultRoute} from 'react-router'
+import ReactDOM from 'react-dom'
 
-// import routes from './config/routes.jsx'
+import routes from './config/routes.jsx'
 import App from './components/layout/App.jsx'
 import AboutView from './components/static/AboutView.jsx'
+import HomeView from './components/static/HomeView.jsx'
+import ContactView from './components/static/ContactView.jsx'
+import TopicsView from './components/topics/TopicsView.jsx'
+import PostView from './components/posts/PostView.jsx'
 
+// var React = require('react');
+// var Router = require('react-router');
+// var routes = require('./config/routes.jsx');
+//
 // Router.run(routes, Router.HashLocation, function(Handler) {
 //   React.render(<Handler />, document.body);
 // });
 
-render((
+
+ReactDOM.render((
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
-       <Route path="about" component={AboutView} />
-    </Route>
-  </Router>
+      <Route path="/" component={App}>
+        <Route path="home" component={HomeView} />
+        <Route path="topics" component={TopicsView}>
+          <Route path="/topics/:topicId" component={PostView} />
+        </Route>
+        <Route path="contact" component={ContactView} />
+         <Route path="about" component={AboutView} />
+      </Route>
+    </Router>
 
 ), document.getElementById('app'))
 

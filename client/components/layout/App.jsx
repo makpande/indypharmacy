@@ -43,7 +43,7 @@ module.exports = React.createClass({
       error: function(error) {
         console.error(url, error['response']);
         location = '/';
-      }
+      }      
     });
   },
 
