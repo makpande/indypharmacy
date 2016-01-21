@@ -1,6 +1,7 @@
 var React = require('react');
 var Router = require('react-router');
 var App = require('../layout/App.jsx');
+var Api = require('../utils/api.jsx');
 var Link = Router.Link;
 
 module.exports = React.createClass({
@@ -14,16 +15,16 @@ module.exports = React.createClass({
     console.log("here in topics view");
     this.readTopicFromAPI();
   },
+
   readTopicFromAPI: function() {
-    this.props.readFromAPI(this.props.origin + '/topics', function(topics) {
+    Api.readFromAPI(this.props.origin + '/topics', function(topics) {
       this.setState({data: topics});
     }.bind(this));
   },
 
 
-  //
   writeTopicToAPI: function(data) {
-    this.props.writeToAPI('topic', this.props.origin + '/topics', data, function(topics) {
+    Api.writeToAPI('topic', this.props.origin + '/topics', data, function(topics) {
       var topics = this.state.data;
       topics.unshift(topics);
       this.setState({data: topics});

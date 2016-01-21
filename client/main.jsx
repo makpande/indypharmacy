@@ -30,8 +30,8 @@ ReactDOM.render((
         <Route path="home" component={HomeView} />
         <Route path="topics" component={TopicsView}>
           <Route path="/topics/:topicId" component={PostView} />
-        </Route>
-        <Route path="contact" component={ContactView} />
+          </Route>
+         <Route path="contact" component={ContactView} />
          <Route path="about" component={AboutView} />
       </Route>
     </Router>
